@@ -9,5 +9,9 @@ public class Main {
         InsertionSort insertionSort = new InsertionSort(myList);
         insertionSort.sortIntegers();
         insertionSort.printSortedList();
+
+        QuickSort quicksort = new QuickSort(myList);
+        quicksort.sortIntegers();
+        quicksort.printSortedList();
     }
 }

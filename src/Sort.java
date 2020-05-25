@@ -36,10 +36,14 @@ public class Sort {
         return Arrays.copyOf(array, array.length);
     }
 
-    protected int[] swapTwoInts(int[] array, int indexBiggest){
-        int toSwap = array[indexBiggest];
-        array[indexBiggest] = array[indexBiggest+1];
-        array[indexBiggest+1] = toSwap;
+    protected int[] swapTwoInts(int[] array, int indexBiggest) {
+        return swapTwoInts(array, indexBiggest, indexBiggest+1);
+    }
+
+    protected int[] swapTwoInts(int[] array, int indexOne, int indexTwo) {
+        int toSwap = array[indexOne];
+        array[indexOne] = array[indexTwo];
+        array[indexTwo] = toSwap;
         return array;
     }
 }
