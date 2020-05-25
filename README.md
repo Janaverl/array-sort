@@ -79,6 +79,8 @@ After selecting a pointer every element is compared to that pointer and placed o
 
 After doing that, all the elements of the left side doesn't have to be compared to the values on the right side again. The right and left sides are now two sub-arrays. Inside this sub-arrays will have a new pointer and devide the values again in two partitions (smaller? in the left partition. bigger? in the right partition).
 
+Sorting is done when the list excists only of pointers and partitions of 1 value.
+
 | example | 10 | 5 | 9 | 4 | 1 | 7 | 6 | 8 | |
 | --- | --- | ---| ---| ---| ---| --- | ---| ---| --- | 
 | **pointer ::: 8** | **10** | **5** | **9** | **4** | **1** | **7** | **6** | **```8```** | |
@@ -95,14 +97,14 @@ After doing that, all the elements of the left side doesn't have to be compared 
 | comparer ::: 4 | 5 | **4** | 1 | 7 | **```6```** | X | | | leave |
 | comparer ::: 1 | 5 | 4 | **1** | 7 | **```6```** | X | | | leave |
 | comparer ::: 7 | 5 | 4 | 1 | **```6```** | **7** | X | | | swap |
-|  |  | | | | |  | | | pointer "6" is placed where it belongs now.. <br> 7 is alone in a partition, so it's also placed where it belongs now.. | 
+|  |  | | | | |  | | | pointer "6" is placed where it belongs now.. <br> 7 is alone in a partition, so it's also placed where it belongs now. | 
 | **pointer ::: 1** | **5** | **4** | **```1```** | | | | | |  |
 | comparer ::: 5 | 4 | **```1```** | **5** | X | X | X | | | swap |
 | comparer ::: 4 | **```1```** | **4** | 5 | X | X | X | | | swap |
 |  |  | | | | |  | | | pointer "1" is placed where it belongs now.. | 
 | **pointer ::: 5** |  | **4** | **```5```** | | | | | |  |
 | comparer ::: 4 | X | **4** | **```5```** | X | X | X | | | leave |
-|  |  | | | | |  | | | pointer "5" is placed where it belongs now.. <br> 4 is alone in a partition, so it's also placed where it belongs now.. | 
+|  |  | | | | |  | | | pointer "5" is placed where it belongs now.. <br> 4 is alone in a partition, so it's also placed where it belongs now. | 
 | **pointer ::: 10** |  |  |  | |  |  | **9** | **```10```** |  |
 | comparer ::: 9 | X | X | X | X | X | X | **9** | **```10```** | leave |
 |  |  | | | | |  | | |  | 
