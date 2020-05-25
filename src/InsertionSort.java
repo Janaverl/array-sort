@@ -16,7 +16,6 @@ public class InsertionSort extends Sort{
         int[] array = duplicateArray(this.list);
 
         for(int sortedLength=0; sortedLength<array.length-1; sortedLength++){
-            System.out.println("round " + (sortedLength+1));
             for(int current=sortedLength; current>=0; current--){
                 if(array[current] > array[current+1]){
                     array = swapTwoInts(array, current);
