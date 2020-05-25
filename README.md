@@ -1,5 +1,5 @@
 # about
-This program compares different ways of sorting an array in Java to find oud which is the fastest.
+This program compares different ways of sorting an array in Java to find out which is the fastest.
 
 ## bubble sort
 Bubble sort is one way to sort an array of values.
