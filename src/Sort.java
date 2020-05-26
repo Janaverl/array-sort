@@ -37,9 +37,8 @@ public class Sort {
     }
 
     public void printSortedList() {
-        for(int i=0; i<this.sortedList.length; i++){
-            System.out.println(this.sortedList[i]);
-        }
+        printArray(this.sortedList);
+    }
     }
 
     protected int[] duplicateArray(int[] array) {
