@@ -1,5 +1,6 @@
 # table of contents
 [about](#about)
+
 [sorting methods](#sorting-methods)
 1. [bubble sort](##bubble-sort)
 1. [insertion sort](##insertion-sort)
