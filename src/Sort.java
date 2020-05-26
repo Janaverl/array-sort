@@ -39,6 +39,8 @@ public class Sort {
     public void printSortedList() {
         printArray(this.sortedList);
     }
+
+    public void sortIntegers(){
     }
 
     protected int[] duplicateArray(int[] array) {
