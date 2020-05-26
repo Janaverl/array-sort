@@ -45,21 +45,21 @@ public class Sort {
     }
 
     public void sortIntegers(){
+
     }
 
     protected int[] duplicateArray(int[] array) {
         return Arrays.copyOf(array, array.length);
     }
 
-    protected int[] swapTwoInts(int[] array, int indexBiggest) {
-        return swapTwoInts(array, indexBiggest, indexBiggest+1);
+    protected void swapTwoInts(int[] array, int indexBiggest) {
+        swapTwoInts(array, indexBiggest, indexBiggest+1);
     }
 
-    protected int[] swapTwoInts(int[] array, int indexOne, int indexTwo) {
+    protected void swapTwoInts(int[] array, int indexOne, int indexTwo) {
         int toSwap = array[indexOne];
         array[indexOne] = array[indexTwo];
         array[indexTwo] = toSwap;
-        return array;
     }
 
     public boolean isAccepted(){

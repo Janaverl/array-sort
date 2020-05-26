@@ -6,7 +6,7 @@ public class BogoSort extends Sort {
     public BogoSort(int[] list) {
         super(list, NAME);
     }
-    
+
     public void sortIntegers() {
         int[] tempArray = duplicateArray(this.list);
 
@@ -28,7 +28,7 @@ public class BogoSort extends Sort {
     private void shuffle(int[] array) {
         for(int i=0; i<array.length-1; i++) {
             int randomBiggerIndex =  getRandomValueInRange((i), (array.length-1));
-            array = swapTwoInts(array, i, randomBiggerIndex);
+            swapTwoInts(array, i, randomBiggerIndex);
         }
     }
 

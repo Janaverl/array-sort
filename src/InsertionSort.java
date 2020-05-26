@@ -20,7 +20,7 @@ public class InsertionSort extends Sort{
         for(int sortedLength=0; sortedLength<array.length-1; sortedLength++){
             for(int current=sortedLength; current>=0; current--){
                 if(array[current] > array[current+1]){
-                    array = swapTwoInts(array, current);
+                    swapTwoInts(array, current);
                 } else {
                     break;
                 }

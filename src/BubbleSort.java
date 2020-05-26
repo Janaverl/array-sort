@@ -22,7 +22,7 @@ public class BubbleSort extends Sort {
             swappedAnElement = false;
             for(int i=0; i<tempArray.length-1; i++){
                 if(tempArray[i] > tempArray[i+1]){
-                    tempArray = swapTwoInts(tempArray, i);
+                    swapTwoInts(tempArray, i);
                     swappedAnElement = true;
                 }
             }
