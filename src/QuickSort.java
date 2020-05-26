@@ -7,8 +7,10 @@
  * Sorting is done when the list excists only of pointers and partitions of 1 value.
  */
 public class QuickSort extends Sort{
+    private static String NAME = "Quick Sort";
+
     public QuickSort(int[] list) {
-        super(list);
+        super(list, NAME);
     }
 
     public void sortIntegers() {

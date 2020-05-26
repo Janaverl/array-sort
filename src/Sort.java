@@ -3,9 +3,19 @@ import java.util.Arrays;
 public class Sort {
     protected int[] list;
     protected int[] sortedList;
+    protected String name;
 
     public Sort(int[] list) {
         this.list = list;
+    }
+
+    public Sort(int[] list, String name) {
+        this.list = list;
+        this.name = name;
+    }
+
+    public String getName() {
+        return this.name;
     }
 
     public void setList(int[] list){

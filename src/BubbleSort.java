@@ -7,9 +7,10 @@
  * The swapping continues until the whole array is in the correct order.
  */
 public class BubbleSort extends Sort {
+    private static String NAME = "Bubble Sort";
 
     public BubbleSort(int[] list) {
-        super(list);
+        super(list, NAME);
     }
 
     public void sortIntegers() {

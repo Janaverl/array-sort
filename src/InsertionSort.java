@@ -8,8 +8,10 @@
  * When you ended this procedure for the value at the last place of the initial array, the insertion sort is done.
  */
 public class InsertionSort extends Sort{
+    private static String NAME = "Insertion Sort";
+
     public InsertionSort(int[] list) {
-        super(list);
+        super(list, NAME);
     }
 
     public void sortIntegers() {
