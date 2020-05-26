@@ -1,6 +1,14 @@
+# table of contents
+[about](#about)
+[sorting methods](#sorting-methods)
+1. [bubble sort](##bubble-sort)
+1. [insertion sort](##insertion-sort)
+1. [quick sort](##quick-sort)
+
 # about
 This program compares different ways of sorting an array in Java to find out which is the fastest.
 
+# sorting methods
 ## bubble sort
 Bubble sort is one way to sort an array of values.
 It compares each item to the item that follows the item.
@@ -36,7 +44,7 @@ Example: set the values of an array from smallest to biggest number
 | round 5 - comparance 20 | 1 | 4 | 5 | **9** -> | <- **10** | **leave** |
 | sorted in 20 comparances | **1** | **4** | **5** | **9** | **10** | A whole round whithout any swap's, you're done! |
 
-
+[back to top](##table-of-contents)
 
 ## insertion sort
 Insertion sort is another way to sort values.
@@ -71,6 +79,8 @@ Example: set the values of an array from smallest to biggest number
 | round 4 - comparance 9 | 4 | **```1```** -> | <- **5** | 9 | 10 | swap |
 | round 4 - comparance 10 | **```1```** -> | <- **4** | 5 | 9 | 10 | swap |
 | sorted in 10 comparances | **1** | **4** | **5** | **9** | **10** | The value that initially was at the last place (1) is sorted, so you're done! |
+
+[back to top](##table-of-contents)
 
 ## quick sort
 Quick Sort is a way of sorting where the list is divided in partitions.
@@ -110,3 +120,4 @@ Sorting is done when the list excists only of pointers and partitions of 1 value
 |  |  | | | | |  | | |  | 
 | you're done! | ```1``` | 4 | ```5``` | ```6```| 7 | ```8``` | 9 | ```10``` | The list now excists only of pointers and partitions of 1 value. You're done! |
 
+[back to top](##table-of-contents)
