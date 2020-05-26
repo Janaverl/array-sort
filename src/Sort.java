@@ -26,6 +26,10 @@ public class Sort {
         return this.sortedList;
     }
 
+    public int getListLength() {
+        return this.list.length;
+    }
+
     private void printArray(int[] array) {
         for(int i=0; i<array.length; i++){
             System.out.println(array[i]);
@@ -56,5 +60,9 @@ public class Sort {
         array[indexOne] = array[indexTwo];
         array[indexTwo] = toSwap;
         return array;
+    }
+
+    public boolean isAccepted(){
+        return true;
     }
 }

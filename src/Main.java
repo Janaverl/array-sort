@@ -9,11 +9,17 @@ public class Main {
         Sort[] sorts = {
                 new BubbleSort(myList),
                 new InsertionSort(myList),
-                new QuickSort(myList)
+                new QuickSort(myList),
+                new BogoSort(myList)
             };
 
         for(int i = 0; i<sorts.length; i++){
             Sort sort = sorts[i];
+
+            if(!sort.isAccepted()){
+                System.out.println(areYouCrazy(sort));
+                continue;
+            }
 
             chrono.start();
             sort.sortIntegers();
@@ -33,5 +39,9 @@ public class Main {
         decimalFormat.setGroupingSize(3);
 
         return name + " sorting took " + decimalFormat.format(interval) + " nanoseconds";
+    }
+
+    private static String areYouCrazy(Sort sort) {
+        return "Are you crazy? I'm not going to perform " + sort.getName() +" for an array with "+ sort.getListLength() + "values.";
     }
 }

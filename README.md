@@ -122,3 +122,44 @@ Sorting is done when the list excists only of pointers and partitions of 1 value
 | you're done! | ```1``` | 4 | ```5``` | ```6```| 7 | ```8``` | 9 | ```10``` | The list now excists only of pointers and partitions of 1 value. You're done! |
 
 [back to top](##table-of-contents)
+
+## bogo sort
+Bogo sort is a very inifficient way of sorting. It is also known as permutation sort, stupid sort, slowsort, shotgun sort or monkey sort.
+
+It's as simple as slow: it sorts the values random, and checks if all the values are in place. If that's not the case, the are sorted randomly again and again checked if they are in place. And so on.
+
+Each round of random sort is programmed like this:
+- the first element is swapped with a random element that comes after it (or itself)
+- the second element is swapped with a random element that comes after it  (or itself)
+- and so on
+- the second last element is swapped with the last element or itsel
+- check if the list is sorted. If not: start over.
+
+this is an example of how one random sort could look like:
+
+| el        | random    | 10            | 5             | 9             | 4             | 1             |
+| ---       | ---       | ---           | ---           | ---           |     ---       | ---           |
+| 1st: 10   | 9         | **```9```**   | 5             | **10**        | 4             | 1             |
+| 2nd: 5    | 1         | ```9```       |  **```1```**  | 10            | 4             | **5**         |
+| 3th: 10   | 10        | ```9```       |  ```1```      | **```10```**  | 4             | 5             |
+| 4th: 4    | 5         | ```9```       |  ```1```      | ```10```      | **```5```**   | **4**         |
+| result    | not sorted! redo! | ```9```       |  ```1```      | ```10```      | ```5```       | ```4```       |
+
+The correct way random should go in this example, in order to be sorted is like that:
+
+| el        | random            | 10            | 5             | 9             | 4             | 1             |
+| ---       | ---               | ---           | ---           | ---           |     ---       | ---           |
+| 1st: 10   | 1                 | **```1```**   | 5             | 9             | 4             | **10**        |
+| 2nd: 5    | 4                 | ```1```       | **```4```**   | 9             | **5**         | 10            |
+| 3th: 9    | 5                 | ```1```       | ```4```       | **```5```**   | **9**         | 10            |
+| 4th: 9    | 9                 | ```1```       | ```4```       | ```5```       | **```9```**   | 10            |
+| result    | yes! it's sorted! | ```1```       |  ```4```      | ```5```       | ```9```       | ```10```      |
+
+What are the ods of only needing one round?
+Well, there are 120 possible sorts in this case (a list of 5 values):
+While swapping the first element, there are 5 possibilities. In the second swap there are 4. Combine those and there are only for the first 2 element 20 possibilities.
+thirth row: 3 swaps, makes 60. Fourth row: 2 swaps, makes 120.
+
+Each try to sort randomly has a change of 1 on 120 to be sorted correct. So it might need more then 120 tries. Because: one result can apear again in another try. So, you just don't know. But in theorie it is possible be right from the first time.
+
+[back to top](##table-of-contents)
