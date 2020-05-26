@@ -5,6 +5,7 @@
 1. [bubble sort](##bubble-sort)
 1. [insertion sort](##insertion-sort)
 1. [quick sort](##quick-sort)
+1. [bogo sort](##bogo-sort)
 
 # about
 This program compares different ways of sorting an array in Java to find out which is the fastest.
@@ -124,18 +125,18 @@ Sorting is done when the list excists only of pointers and partitions of 1 value
 [back to top](##table-of-contents)
 
 ## bogo sort
-Bogo sort is a very inifficient way of sorting. It is also known as permutation sort, stupid sort, slowsort, shotgun sort or monkey sort.
+This one is just for funn. Bogo sort is a very inefficient way of sorting. It is also known as permutation sort, stupid sort, slowsort, shotgun sort or monkey sort.
 
-It's as simple as slow: it sorts the values random, and checks if all the values are in place. If that's not the case, the are sorted randomly again and again checked if they are in place. And so on.
+It's as simple as slow: it sorts the values random, and checks if all the values are in place. If that's not the case, the are shuffled again and checked if they are in place this time. And so on.
 
 Each round of random sort is programmed like this:
 - the first element is swapped with a random element that comes after it (or itself)
-- the second element is swapped with a random element that comes after it  (or itself)
+- the second element is swapped with a random element that comes after it (or itself)
 - and so on
-- the second last element is swapped with the last element or itsel
+- the second last element is swapped with the last element or itself
 - check if the list is sorted. If not: start over.
 
-this is an example of how one random sort could look like:
+this is an example of how one random shuffle could look like:
 
 | el        | random    | 10            | 5             | 9             | 4             | 1             |
 | ---       | ---       | ---           | ---           | ---           |     ---       | ---           |
@@ -145,7 +146,7 @@ this is an example of how one random sort could look like:
 | 4th: 4    | 5         | ```9```       |  ```1```      | ```10```      | **```5```**   | **4**         |
 | result    | not sorted! redo! | ```9```       |  ```1```      | ```10```      | ```5```       | ```4```       |
 
-The correct way random should go in this example, in order to be sorted is like that:
+To end up with a correctly ordered list, the shuffling should go exactly like this:
 
 | el        | random            | 10            | 5             | 9             | 4             | 1             |
 | ---       | ---               | ---           | ---           | ---           |     ---       | ---           |
@@ -155,11 +156,11 @@ The correct way random should go in this example, in order to be sorted is like 
 | 4th: 9    | 9                 | ```1```       | ```4```       | ```5```       | **```9```**   | 10            |
 | result    | yes! it's sorted! | ```1```       |  ```4```      | ```5```       | ```9```       | ```10```      |
 
-What are the ods of only needing one round?
-Well, there are 120 possible sorts in this case (a list of 5 values):
-While swapping the first element, there are 5 possibilities. In the second swap there are 4. Combine those and there are only for the first 2 element 20 possibilities.
-thirth row: 3 swaps, makes 60. Fourth row: 2 swaps, makes 120.
+What are the ods of only needing one round of shuffle?
+Well, there are 120 possible shuffles in this example (a list of 5 values):
+While swapping the first element, there are 5 possible swaps. In the second swap there are 4. Combine those and there are only for the first 2 values 20 possibilities.
+Thirth element: 3 swaps, makes 60. Fourth element: 2 swaps, makes 120.
 
-Each try to sort randomly has a change of 1 on 120 to be sorted correct. So it might need more then 120 tries. Because: one result can apear again in another try. So, you just don't know. But in theorie it is possible be right from the first time.
+Each try to sort randomly has a chance of 1 on 120 to be sorted correct. So the bogo sort might need more then 120 tries. Because: one result can apear again in another try. You just don't know what will happen, in theorie it is possible that the first shuffle is correct.
 
 [back to top](##table-of-contents)
